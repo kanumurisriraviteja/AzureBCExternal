@@ -6,7 +6,7 @@
 //       '[VARIABLE]' with actual values 
 //        e.g [GITREPO] might become https://github.com/MyName/external.git
 // variables:
-//      [PROJECTID]
+//      roidtc-july2022-u212
 //      [CREDENTIALS_ID]  //id of your global docker credentials in Jenkins https://www.google.com/search?q=add+docker+credentials+Jenkins&oq=add+docker+credentials+Jenkins
 //      [GITREPO]
 //      [DOCKERID]
@@ -75,7 +75,7 @@ pipeline {
             steps {
                 sh "rm -rf ${WORKSPACE}/kube/"
                 echo 'Get cluster credentials'
-                sh 'gcloud container clusters get-credentials [CLUSTER_NAME] --zone [ZONE] --project [PROJECTID]'
+                sh 'gcloud container clusters get-credentials [CLUSTER_NAME] --zone [ZONE] --project roidtc-july2022-u212'
             }
         }     
          stage('update k8s') {
